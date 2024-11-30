@@ -67,6 +67,10 @@ html{
 *, *:before, *:after{
     box-sizing: inherit;
 }
+/*Small- min-width: 450px
+Medium- min-width: 620px
+Large- min-width: 950px
+XL- min-width: 1280px*/
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 body{
     width: 100%;
