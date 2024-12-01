@@ -364,8 +364,6 @@ footer span{
         font-family: "Inter";
         justify-content: center;
         display:grid;
-        header span{
-            visibility: visible;
         }
         nav{
             background-color: #E9BB57;
@@ -387,8 +385,7 @@ footer span{
         }
 }
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
-@media screen and (min-width: 1280px) 
-{
+@media screen and (min-width: 1280px){
     body{
         width: 1280px;
         height: 100%;
@@ -396,6 +393,7 @@ footer span{
         font-family: "Inter";
         justify-content: center;
         display:grid;
+    }
     h1{
         font-family: "Kavoon";
         font-size: 3em;
