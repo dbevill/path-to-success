@@ -74,11 +74,12 @@ XL- min-width: 1280px*/
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 body{
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     background-color: #484FB7;
     font-family: "Inter";
-    /*justify-content: center;*/
+    justify-content: center;
 
 }
 h1{
@@ -86,21 +87,50 @@ h1{
     font-size: 3em;
     background-color: #6B8FE7;
     color: #ffffff;
+    padding: 60px 20px;
+    width: 100%;
+    border-radius: 0px 0px 25px 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 header p{
     color: #ffffff;
     background-color: #D9526F;
     font-family: "Inter";
     text-align: center;
-    font-size: .5em;
+    font-size: .75em;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-style: italic;
+    width: 95%;
+    border-radius: 0px 0px 25px 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
 }
-span{
+header span{
     display: none;
 }
 nav{
     background-color: #E9BB57;
     color: #1E1E1E;
     font-family: "Inter";
+    text-transform: uppercase;
+    width: 135px;
+    border-radius: 0px 0px 5px 10px;
+    padding-left: 0px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight:700;
+    position: fixed;
+    display: block;
+    text-align: center;
+    font-style: oblique;
+    margin: 0;
+    top: 0px;
+    left: 350px;
 }
 ul{
     display: none;
@@ -253,12 +283,43 @@ td{
     padding: 20px;
     font-weight: bold;
     margin-left: 25px;
-    box-shadow: #1E1E1E;
+    box-shadow: 5px 5px #1E1E1E;
 }
 footer{
     background-color: #6B8FE7;
     color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0px 0px 25px 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 40px;
+    font-size: .75em;
+    margin-bottom: 75px;
+}
+footer span{
+    display: visible;
+    text-decoration: underline;
 }
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
+Medium- min-width: 620px
+
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
+Large- min-width: 950px
+
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+XL- min-width: 1280px*/
+/*h1{
+    font-family: "Kavoon";
+    font-size: 3em;
+    background-color: #6B8FE7;
+    color: #ffffff;
+    padding: 50px 20px;
+    width: 95%;
+    border-radius: 0px 0px 25px 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}*/
