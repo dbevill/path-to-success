@@ -80,7 +80,6 @@ body{
     background-color: #484FB7;
     font-family: "Inter";
     justify-content: center;
-
 }
 h1{
     font-family: "Kavoon";
@@ -109,9 +108,6 @@ header p{
     margin-right: auto;
     margin-bottom: 50px;
 }
-header span{
-    display: none;
-}
 nav{
     background-color: #E9BB57;
     color: #1E1E1E;
@@ -125,12 +121,12 @@ nav{
     padding-bottom: 10px;
     font-weight:700;
     position: fixed;
-    display: block;
     text-align: center;
     font-style: oblique;
     margin: 0;
     top: 0px;
     right: 0px;
+    order: 1;
 }
 ul{
     display: none;
@@ -304,22 +300,34 @@ footer{
     margin-bottom: 75px;
 }
 footer span{
-    display: visible;
     text-decoration: underline;
 }
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
-@media screen and (min-width: 620px){
+@media screen and (min-width:620px){
     body{
         width: 620px;
     }
+    header span{
+        visibility: visible;
+    }
+    nav{
+        top: 0px;
+        right: 80px;
+        position: fixed;
+    }
     #oneservice{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        padding: 15px;
+        grid-template-columns: 300px 300px;
+        grid-gap: 2rem;
+        grid-template-areas: 
+        "pdev carco"
+        "relco relco"
+        ;
     }
     #pdev{
         grid-column-start: 1;
-        grid-column-end: 2;
+        grid-column-end: 2;       
     }
     #carco{
         grid-column-start: 2;
@@ -328,31 +336,284 @@ footer span{
     #relco{
         grid-column-start: 1;
         grid-column-end: 3;
+        /*width: 100%;*/
     }
+    #groupservice{
+        display: grid;
+        padding: 15px;
+        grid-template-columns: 300px 300px;
+        grid-template-areas: 
+        "supco focsess"
+        ;
+    }
+    #supco{
+        grid-column-start: 1;
+        grid-column-end: 2;   
+    }
+    #focsess{
+        grid-column-start: 2;
+        grid-column-end: 3;
     }
 }
-/*
-#groupservice
-#workservice
-#onlineservice
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
-/*@media screen and (min-width: 950px){
-
+@media screen and (min-width: 950px){
+    body{
+        width: 950px;
+        height: 100%;
+        background-color: #484FB7;
+        font-family: "Inter";
+        justify-content: center;
+        display:grid;
+        header span{
+            visibility: visible;
+        }
+        nav{
+            background-color: #E9BB57;
+            position: fixed;
+            order: 1;
+        }
+        nav h2{
+            visibility: hidden;
+        }
+        ul li{
+            display: inline-block;
+        }
+        nav a{
+            text-decoration: none;
+            color: #1E1E1E;
+        }
+        ul{
+            visibility: visible;
+        }
 }
-
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
-/*@media screen and (min-width: 1280px){
-
-} */
-/*h1{
-    font-family: "Kavoon";
-    font-size: 3em;
-    background-color: #6B8FE7;
-    color: #ffffff;
-    padding: 50px 20px;
-    width: 95%;
-    border-radius: 0px 0px 25px 25px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}*/
+@media screen and (min-width: 1280px){
+    body{
+        width: 1280px;
+        height: 100%;
+        background-color: #484FB7;
+        font-family: "Inter";
+        justify-content: center;
+        display:grid;
+    h1{
+        font-family: "Kavoon";
+        font-size: 3em;
+        background-color: #6B8FE7;
+        color: #ffffff;
+        padding: 60px 20px;
+        width: 80%;
+        border-radius: 0px 0px 25px 25px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    header p{
+        color: #ffffff;
+        background-color: #D9526F;
+        font-family: "Inter";
+        text-align: center;
+        font-size: .75em;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        font-style: italic;
+        width: 75%;
+        border-radius: 0px 0px 25px 25px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    }
+    header span{
+        visibility: visible;
+    }
+    nav{
+        background-color: #E9BB57;
+        position: fixed;
+        order: 1;
+    }
+    nav h2{
+        visibility: hidden;
+    }
+    ul li{
+        display: inline-block;
+    }
+    nav a{
+        text-decoration: none;
+        color: #1E1E1E;
+    }
+    ul{
+        visibility: visible;
+    }
+    nav h2{
+        font-family: "Inter";
+        font-size: 1.5em;
+        color: #1E1E1E;
+    }
+    h2{
+        font-family: "Kavoon";
+        font-size: 2em;
+        color: #ffffff;
+        padding-left: 15px;
+    }
+    h3{
+        font-family: "Inter";
+        font-size: 1.5em;
+        color: #E9BB57;
+        font-weight: bold;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        padding-top: 5px;
+    }
+    h4{
+        font-family: "Inter";
+        font-size: 1.15em;
+        color: #484FB7;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+    img{
+        padding: 15px;
+    }
+    .servicecard{
+        background-color: #ffffff;
+        color: #1E1E1E;
+        border-radius: 20px;
+        width: 400px;
+        padding-left: 25px;
+        padding-bottom: 25px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 15px;
+    }
+    .servicecard p{
+        font-family: "Inter";
+        padding: 10px;
+    }
+    #chooseus{
+        background-color: #D9526F;
+        color: #ffffff;
+        width: 100%;
+        padding-left: 10px;
+        padding-bottom: 25px;
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 100px 200px 200px;
+        justify-content: space-around;
+    }
+    #chooseus h2{
+        margin-left: -15px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        grid-column: 1/ span 2;
+    }
+    #personal{
+        background-color: #4CA7C0;
+        color: #1E1E1E;
+        border-radius: 20px;
+        font-family: "Inter";
+        font-weight: bold;
+        text-align: center;
+        width: 200px;
+        height: 150px;
+        padding-top: 50px;
+    }
+    #proven{
+        background-color: #6B8FE7;
+        color: #1E1E1E;
+        border-radius: 20px;
+        font-family: "Inter";
+        font-weight: bold;
+        text-align: center;
+        width: 200px;
+        height: 150px;
+        padding-top: 50px;
+    }
+    #supportive{
+        background-color: #E9BB57;
+        color: #1E1E1E;
+        border-radius: 20px;
+        font-family: "Inter";
+        font-weight: bold;
+        text-align: center;
+        width: 200px;
+        height: 150px;
+        padding-top: 50px;
+    }
+    #flexible{
+        background-color: #ffffff;
+        color: #1E1E1E;
+        border-radius: 20px;
+        font-family: "Inter";
+        font-weight: bold;
+        text-align: center;
+        width: 200px;
+        height: 150px;
+        padding-top: 50px;
+    }
+    table{
+        text-align: center;
+        font-family: "Inter";
+        border:  #E9BB57 3px solid;
+        width: 300px;
+        margin-left: 100px;
+        margin-bottom: 15px; 
+    }
+    th{
+        background-color: #E9BB57;
+        color: #1E1E1E;
+        border:  #E9BB57 3px solid;
+        padding: 15px;
+        font-weight: bold;
+    }
+    tr{
+        background-color: #ffffff;
+        border:  #E9BB57 3px solid;
+    }
+    td{
+        border:  #E9BB57 3px solid;
+        padding: 15px;
+    }
+    #firststep{
+        background-color: #D9526F;
+        color: #ffffff;
+        font-family: "Inter";
+        padding: 40px;
+        align-content: center;
+    }
+    #firststep h2, #firststep p{
+        padding-bottom: 20px;
+    }
+    #firststep h2{
+        padding-left: 0px;
+    }
+    #schedule{
+        background-color: #ffffff;
+        color: #1E1E1E;
+        border-radius: 20px;
+        text-align: center;
+        width: 350px;
+        padding: 20px;
+        font-weight: bold;
+        margin-left: 25px;
+        box-shadow: 5px 5px #1E1E1E;
+    }
+    footer{
+        background-color: #6B8FE7;
+        color: #ffffff;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        width: 100%;
+        border-radius: 0px 0px 25px 25px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 50px 40px;
+        font-size: .75em;
+        margin-bottom: 75px;
+    }
+    footer span{
+        display: visible;
+        text-decoration: underline;
+        visibility: visible;
+    }
+}
