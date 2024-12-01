@@ -387,7 +387,8 @@ footer span{
         }
 }
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1280px) 
+{
     body{
         width: 1280px;
         height: 100%;
