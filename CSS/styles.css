@@ -117,12 +117,12 @@ nav{
     color: #1E1E1E;
     font-family: "Inter";
     text-transform: uppercase;
-    width: 135px;
+    width: 125px;
     border-radius: 0px 0px 5px 10px;
     padding-left: 0px;
-    padding-right: 15px;
+    padding-right: 5px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     font-weight:700;
     position: fixed;
     display: block;
@@ -130,7 +130,7 @@ nav{
     font-style: oblique;
     margin: 0;
     top: 0px;
-    left: 350px;
+    right: 0px;
 }
 ul{
     display: none;
@@ -169,10 +169,11 @@ img{
     background-color: #ffffff;
     color: #1E1E1E;
     border-radius: 20px;
-    width: 450px;
+    width: 400px;
     padding-left: 25px;
     padding-bottom: 25px;
-    margin-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 15px;
 }
 .servicecard p{
@@ -274,6 +275,9 @@ td{
 #firststep h2, #firststep p{
     padding-bottom: 20px;
 }
+#firststep h2{
+    padding-left: 0px;
+}
 #schedule{
     background-color: #ffffff;
     color: #1E1E1E;
@@ -304,13 +308,42 @@ footer span{
     text-decoration: underline;
 }
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
-Medium- min-width: 620px
-
+@media screen and (min-width: 620px){
+    body{
+        width: 620px;
+    }
+    #oneservice{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #pdev{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #carco{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #relco{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    }
+}
+/*
+#groupservice
+#workservice
+#onlineservice
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
-Large- min-width: 950px
+/*@media screen and (min-width: 950px){
+
+}
 
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
-XL- min-width: 1280px*/
+/*@media screen and (min-width: 1280px){
+
+} */
 /*h1{
     font-family: "Kavoon";
     font-size: 3em;
